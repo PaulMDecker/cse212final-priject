@@ -16,7 +16,7 @@ there are many times when you will do something, then need to reverse it.
 
 ### stack syntax
 There are five basic parts to stack syntax
-(note my_stack is just a placeholder, you can name your stack whatever you want)
+(note my_stack is just a placeholder; you can name your stack whatever you want)
 
 Stack Operation|  description  | code                 | Big O Performance
 ---------------|---------------|----------------------|----------------
