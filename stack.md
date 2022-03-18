@@ -15,17 +15,36 @@ there are many times when you will do something, then need to reverse it.
 -	Using a stack, here called a function stack, will allow the computer to keep track of which function is currently running as well as which part of a function you were in when it called a new function, as having to start over from function A when function B ends would result in an infinite loop.
 
 ### stack syntax
-There are five parts to stack syntax
+There are five basic parts to stack syntax
+(note my_stack is just a placeholder, you can name your stack whatever you want)
 
-Stack Operation| description| code| Big O Performance
----------------|------------|-----|------------------
-create(stack)  | 
----------------|------------|-----|------------------
+Stack Operation|  description  | code                 | Big O Performance
+---------------|---------------|----------------------|----------------
+create(stack) |creates a new stack| **my_stack = []**|O(1)- Performance of creating the stack|
+push(value)|adds the value to the back of the stack. |**my_stack.append(value)**|O(1) - Performance of adding to the end of a dynamic array|
+pop()| Remove and return item from the back of the stack| **value = my_stack.pop()**|O(1) - Performance of removing from the end of a dynamic array|
+size()| Return the size of the stack.| **length = len(my_stack)**| O(1) - Performance of returning the size of the dynamic array|
+empty()| Returns true if the length of the stack is zero.| **if len(my_stack) == 0:**| O(1) - Performance of checking the size of the dynamic array|
 
----------------|------------|-----|------------------
 
----------------|------------|-----|------------------
 
----------------|------------|-----|------------------
 
----------------|------------|-----|------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
