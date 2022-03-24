@@ -7,7 +7,7 @@
 - If your hash function is index(n) = n % y where y is equal to the size of the set, the data will be placed at the index equal to the modulus, and thanks to how rounding works, it’s impossible for the index to be outside the set, preventing overflow problems.
 
 ### addressing conflicts from hashing
--	There is one problem with using modulus in the hash function. It’s possible for two different numbers to have the same modulus, and thus would be placed in the same index. When this happens, it is called a conflict.
-### uses of sets
--	
-### set syntax
+- There is one problem with using modulus in the hash function. It’s possible for two different numbers to have the same modulus, and thus would be placed in the same index. When this happens, it is called a conflict. There are two methods of dealing with a conflict. The first is called open addressing, and the second is called chaining.
+- Open addressing works by when you try to put something into an index space and find something already there, we simply place the data in the next available spot. The problem with this method is that it can generate more conflicts when you try to put a new number in the set.
+- Chaining is when each index space doesn’t contain just one piece of data, instead it contains a list that contains the data that can go in the index space.
+- The problem with these methods of resolving conflict is that they slow the function down. The reason to use a set at all is because it has an O(1) performance, where finding a particular piece of data always takes the same amount of time regardless of how big the set is. 
