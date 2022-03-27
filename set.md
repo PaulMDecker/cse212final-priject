@@ -10,4 +10,31 @@
 - There is one problem with using modulus in the hash function. It’s possible for two different numbers to have the same modulus, and thus would be placed in the same index. When this happens, it is called a conflict. There are two methods of dealing with a conflict. The first is called open addressing, and the second is called chaining.
 - Open addressing works by when you try to put something into an index space and find something already there, we simply place the data in the next available spot. The problem with this method is that it can generate more conflicts when you try to put a new number in the set.
 - Chaining is when each index space doesn’t contain just one piece of data, instead it contains a list that contains the data that can go in the index space.
-- The problem with these methods of resolving conflict is that they slow the function down. The reason to use a set at all is because it has an O(1) performance, where finding a particular piece of data always takes the same amount of time regardless of how big the set is. 
+- The problem with these methods of resolving conflict is that they slow the function down. The reason to use a set at all is because it has an O(1) performance, where finding a particular piece of data always takes the same amount of time regardless of how big the set is. When you have conflicts or a chained list, the function becomes less and less efficient until after a certain point, you would be better off making a new, larger set and copying everything into that set.
+
+
+### set syntax
+
+set Operation  |  description  | code                 | Big O Performance
+---------------|---------------|----------------------|----------------
+add(value) | Adds "value to the set | my_set.add(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) | remove(value) | Removes the "value" from the set | my_set.remove(value) | O(1) - Performance of hashing the value (assuming good conflict resolution) | member(value) | Determines if "value" is in the set | if value in my_set: | O(1) - Performance of hashing the value (assuming good conflict resolution) | size() | Returns the number of items in the set | length = len(my_set) | O(1) - Performance of returning the size of the set| 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
