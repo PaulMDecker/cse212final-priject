@@ -25,10 +25,10 @@ def write (input):
 def undo(text):
   
   stack.pop()
-  return stack
+  print(" ".join(stack))
 ```
 ### practice
-- redo
+Now implement a function 
 
 ### stack syntax
 There are five basic parts to stack syntax
