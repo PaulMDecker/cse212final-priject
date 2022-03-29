@@ -14,6 +14,11 @@ there are many times when you will do something, then need to reverse it.
 -	The other time you will be using stacks will be when you call a function that calls a different function. Simply calling a function is part of the code, but you will be needing tell the computer that if function A calls function B, it needs to go back to function A when function B ends. This becomes even more complicated when function B itself calls several more functions.
 -	Using a stack, here called a function stack, will allow the computer to keep track of which function is currently running as well as which part of a function you were in when it called a new function, as having to start over from function A when function B ends would result in an infinite loop.
 
+### example
+- undo
+### practice
+- redo
+
 ### stack syntax
 There are five basic parts to stack syntax
 (note my_stack is just a placeholder; you can name your stack whatever you want)
