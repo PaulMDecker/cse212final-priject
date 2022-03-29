@@ -13,6 +13,6 @@
 	- navigate with a tree without recursion
 	- use loop
 	### problem
-	-insert into a tree
+	- insert into a tree
 	### search tree syntax
 
