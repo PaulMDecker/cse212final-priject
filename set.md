@@ -12,6 +12,10 @@
 - Chaining is when each index space doesn’t contain just one piece of data, instead it contains a list that contains the data that can go in the index space.
 - The problem with these methods of resolving conflict is that they slow the function down. The reason to use a set at all is because it has an O(1) performance, where finding a particular piece of data always takes the same amount of time regardless of how big the set is. When you have conflicts or a chained list, the function becomes less and less efficient until after a certain point, you would be better off making a new, larger set and copying everything into that set.
 
+### example problem
+-combining two different lists
+### practice problem
+- looking through two different lists and finding duplicates between them.
 
 ### set syntax
 
