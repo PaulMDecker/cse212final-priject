@@ -16,6 +16,10 @@ there are many times when you will do something, then need to reverse it.
 
 ### example
 - undo
+```
+def undo(text)
+  
+```
 ### practice
 - redo
 
