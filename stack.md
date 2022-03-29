@@ -18,7 +18,11 @@ there are many times when you will do something, then need to reverse it.
 - undo
 ```
 def undo(text)
-  
+  stack = []
+  for item in text:
+    stack.push(item)
+  stack.pop()
+  return stack
 ```
 ### practice
 - redo
