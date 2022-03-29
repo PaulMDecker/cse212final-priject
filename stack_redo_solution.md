@@ -8,9 +8,9 @@ def write (input):
   
 def undo(text):
   redo.push(stack.pop())
-  return stack
+  print(" ".join(stack))
   
   def redo():
   stack.push(redo.pop())
-  return stack
+  print(" ".join(stack))
 ```
