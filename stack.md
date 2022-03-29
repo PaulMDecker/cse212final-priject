@@ -16,11 +16,14 @@ there are many times when you will do something, then need to reverse it.
 
 ### example: undo
 when using a word processor, sometimes you will make a mistake. this function will let you undo that mistake. 
-```
-def undo(text)
-  stack = []
-  for item in text:
-    stack.push(item)
+```  python
+global stack = []
+
+def write (input):
+  stack.push(input)
+  return input
+def undo(text):
+  
   stack.pop()
   return stack
 ```
