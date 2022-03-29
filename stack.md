@@ -27,8 +27,8 @@ def undo(text):
   stack.pop()
   print(" ".join(stack))
 ```
-### practice
-Now implement a function 
+### practice: redo
+Now implement a function that reverses the undo function. You many need to add another stack and alter the other functions.
 
 ### stack syntax
 There are five basic parts to stack syntax
