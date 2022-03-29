@@ -8,6 +8,11 @@
 -	A binary search tree is a tree that has certain rules for how data is stored inside it.
 	### inserting into a tree
 	### traversing a tree
-	### uses of trees
+	### uses of tree
+	### example
+	- navigate with a tree without recursion
+	- use loop
+	### problem
+	-insert into a tree
 	### search tree syntax
 
