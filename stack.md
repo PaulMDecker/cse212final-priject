@@ -29,7 +29,7 @@ def undo(text):
 ```
 ### practice: redo
 Now implement a function that reverses the undo function. You many need to add another stack and alter the other functions.
-
+You can view the solution [here] (https://github.com/PaulMDecker/cse212final-project/blob/main/stack_redo_solution.md)
 ### stack syntax
 There are five basic parts to stack syntax
 (note my_stack is just a placeholder; you can name your stack whatever you want)
