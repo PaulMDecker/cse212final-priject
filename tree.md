@@ -5,6 +5,8 @@
 
 ### binary tree
 -A binary tree is a tree where each node only connects to two other nodes. The root of a binary tree is the node that points to other nodes and has no nodes pointing to it. A root node is also a parent node because it is pointing to other nodes. A node that is being pointed to is called a child node and the node that is doing the pointing is called a parent node. A node that has a parent node, but no child nodes is called a leaf node. A parent and its child nodes is called a subtree.
+<img width="662" alt="Screen Shot 2022-03-30 at 1 59 30 PM" src="https://user-images.githubusercontent.com/97462627/160920621-959f7e8a-ff1f-4cea-bbf4-2a7fd6f72f6a.png">
+
 ### binary search tree
 -A binary search tree is a tree that has certain rules for how data is stored inside it.
 ### inserting into a tree
