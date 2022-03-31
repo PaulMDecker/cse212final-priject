@@ -1,6 +1,7 @@
-# 4. tree
+# tree
 ### Introduction
 -A linked list is a data structure where data is stored in nodes, and the nodes are connected by pointers. A tree is like a linked list except that in a tree a node can be connected to multiple nodes.  
+
 
 
 ### binary tree
