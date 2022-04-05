@@ -112,7 +112,8 @@ def _traverse_forward(self, node):
 ```
 ### uses of tree
 - A binary search tree is used when you have a very large sorted list that needs to be searched through quickly. seaching through a BST has a big-O effiecncy of O(log n) because each time you iterate through the search function, it will halve the remaining data.
-### example
+### example problem: searching a BST using a loop.
+- This example shows how to imlement a function that searches through a BST for a given number using a loop instead of using recursion. 
 ```python
 from dataclasses import dataclass
 
@@ -257,8 +258,9 @@ print(tree.search(11))
 
 
 ```
-### problem
-- insert into a tree
+### practice problem
+Adapt the insert function to work with a loop instead of using recursion.
+solution here.
 ### search tree syntax
 common BST Operations  |  description  | Big O Performance
 -----------------------|---------------|-------------------
