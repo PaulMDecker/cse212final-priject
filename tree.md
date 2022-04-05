@@ -112,12 +112,9 @@ def _traverse_forward(self, node):
 ```
 ### uses of tree
 - A binary search tree is used when you have a very large sorted list that needs to be searched through quickly. seaching through a BST has a big-O effiecncy of O(log n) because each time you iterate through the search function, it will halve the remaining data.
-### example problem: searching a BST using a loop.
-- This example shows how to imlement a function that searches through a BST for a given number using a loop instead of using recursion. 
+### example problem: inserting into a BST using a loop.
+- This example shows how to imlement a function that inserts a number in a BST  using a loop instead of using recursion. 
 ```python
-from dataclasses import dataclass
-
-
 class BST:
     """
     Implement the Binary Search Tree (BST) data structure.  The Node 
@@ -147,44 +144,6 @@ class BST:
         Initialize an empty BST.
         """
         self.root = None
-
-    def insert(self, data):
-        """
-        Insert 'data' into the BST.  If the BST
-        is empty, then set the root equal to the new 
-        node.  Otherwise, use _insert to recursively
-        find the location to insert.
-        """
-        if self.root is None:
-            self.root = BST.Node(data)
-        else:
-            self._insert(data, self.root)  # Start at the root
-
-    def _insert(self, data, node):
-        """
-        This function will look for a place to insert a node
-        with 'data' inside of it.  The current sub-tree is
-        represented by 'node'.  This function is intended to be
-        called the first time by the insert function.
-        """
-        if data < node.data:
-            # The data belongs on the left side.
-            if node.left is None:
-                # We found an empty spot
-                node.left = BST.Node(data)
-            else:
-                # Need to keep looking.  Call _insert
-                # recursively on the left sub-tree.
-                self._insert(data, node.left)
-        else:
-            # The data belongs on the right side.
-            if node.right is None:
-                # We found an empty spot
-                node.right = BST.Node(data)
-            else:
-                # Need to keep looking.  Call _insert
-                # recursively on the right sub-tree.
-                self._insert(data, node.right)
 
     def __iter__(self):
         """
@@ -229,8 +188,6 @@ class BST:
             yield node.data
             yield from self._traverse_forward(node.right)
         
-
-
     def search(self, number):
         curr = self.root
         while curr is not None:
@@ -241,7 +198,33 @@ class BST:
             else:
                 return curr.data
         return "The number is not in this tree."
-   
+            
+        """
+        This function is the search function that will look for an empty node to place data in.
+    if the data is less than the data contained in the current node, it will try to place the 
+    data in the left child node, and if it is greater than the data in the current node, it will
+    place the data in the right child node. if the child node is already full, it will repeat the
+    process until it finds an empty node.
+        """
+    def insert(self, data):
+        if self.root is None:
+            self.root = BST.Node(data)
+            return
+        else:
+            curr = self.root
+            while curr is not None:
+                if data < curr.data:
+                    if curr.left is None:
+                        curr.left = BST.Node(data)
+                        return
+                    else:
+                        curr = curr.left
+                elif data >= curr.data:
+                    if curr.right is None:
+                        curr.right = BST.Node(data)
+                        return
+                    else:
+                        curr = curr.right
 
 tree = BST()
 tree.insert(5)
@@ -252,10 +235,8 @@ tree.insert(4)
 tree.insert(7)
 tree.insert(10)
 
-print(tree.search(8))
-print(tree.search(10))
-print(tree.search(11))
-
+for node in tree:
+    print(node)
 
 ```
 ### practice problem
