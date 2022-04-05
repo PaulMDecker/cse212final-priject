@@ -57,6 +57,9 @@ def insert(self, data):
 ### traversing a tree
 - When you want to display all the data in a tree, you need to traverse the tree. There are three methods of traversing a tree. The pre-order traversal, the in-order traversal, and the post-order traversal. Pre-order traversal is when we iterate through the nodes from left to right, in-order traversal is when we iterate through the tree from smallest to largest, and post-order traversal is when we iterate from the leaves of the tree to the root.
 - For this lesson, we will focus on in-order traversal. 
+
+-	The first function here is called **__iter__**. The double underscores on either side mean that the functions is part of pythons framework. For example, a **loop** calls **__iter__** to get the next item. This type of function is called a generator function.
+-	The **yield** command provides the next value in a **for* loop. It functions like a ** return** statement, but it doesn’t automatically end the function. This allows it to send out a value then let the function continue where it left off. If the generator function needs to have a different function **yield** its data, it will need to use the **yield from** keywords.
 ``` python
 def __iter__(self):
 	"""
@@ -72,12 +75,14 @@ def __iter__(self):
 
 def _traverse_forward(self, node):
 	"""
-	Does a forward traversal (in-order traversal) through the 
-	BST.  If the node that we are given (which is the current
-	subtree) exists, then we will keep traversing on the left
-	side (thus getting the smaller numbers first), then we will 
-	provide the data in the current node, and finally we will 
-	traverse on the right side (thus getting the larger numbers last).
+	This function does an in-order traversal through the 
+	Binary search tree. 
+	If the node that we are given (which is the current
+	subtree) is not None, (meaning it exists), then we will keep 
+	traversing on the left side (thus getting the smaller numbers 
+	first), then we will provide the data in the current node, 
+	and finally we will traverse on the right side 
+	(thus getting the larger numbers last).
 
 	The use of the 'yield' will allow this function to support loops
 	like:
