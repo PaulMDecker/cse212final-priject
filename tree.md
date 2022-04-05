@@ -1,11 +1,11 @@
 # tree
 ### Introduction
--A linked list is a data structure where data is stored in nodes, and the nodes are connected by pointers. A tree is like a linked list except that in a tree a node can be connected to multiple nodes.  
+- A linked list is a data structure where data is stored in nodes, and the nodes are connected by pointers. A tree is like a linked list except that in a tree a node can be connected to multiple nodes.  
 
 
 
 ### binary tree
--A binary tree is a tree where each node only connects to two other nodes. The root of a binary tree is the node that points to other nodes and has no nodes pointing to it. A root node is also a parent node because it is pointing to other nodes. A node that is being pointed to is called a child node and the node that is doing the pointing is called a parent node. A node that has a parent node, but no child nodes is called a leaf node. A parent and its child nodes is called a subtree.
+- A binary tree is a tree where each node only connects to two other nodes. The root of a binary tree is the node that points to other nodes and has no nodes pointing to it. A root node is also a parent node because it is pointing to other nodes. A node that is being pointed to is called a child node and the node that is doing the pointing is called a parent node. A node that has a parent node, but no child nodes is called a leaf node. A parent and its child nodes is called a subtree.
 <img width="662" alt="Screen Shot 2022-03-30 at 1 59 30 PM" src="https://user-images.githubusercontent.com/97462627/160920621-959f7e8a-ff1f-4cea-bbf4-2a7fd6f72f6a.png">
 
 ### binary search tree
