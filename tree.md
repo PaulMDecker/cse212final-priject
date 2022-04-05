@@ -53,6 +53,53 @@ def insert(self, data):
 			self._insert(data, node.right)
 ```
 ### traversing a tree
+-When you want to display all the data in a tree, you need to traverse the tree. There are three methods of traversing a tree. The pre-order traversal, the in-order traversal, and the post-order traversal. Pre-order traversal is when we iterate through the nodes from left to right, in-order traversal is when we iterate through the tree from smallest to largest, and post-order traversal is when we iterate from the leaves of the tree to the root.
+-For this lesson, we will focus on in-order traversal. 
+```
+def __iter__(self):
+	"""
+    Perform a forward traversal (in order traversal) starting from 
+    the root of the BST.  This is called a generator function.
+    This function is called when a loop	is performed:
+
+	for value in my_bst:
+		print(value)
+
+	"""
+	yield from self._traverse_forward(self.root)  # Start at the root
+
+def _traverse_forward(self, node):
+	"""
+	Does a forward traversal (in-order traversal) through the 
+	BST.  If the node that we are given (which is the current
+	subtree) exists, then we will keep traversing on the left
+	side (thus getting the smaller numbers first), then we will 
+	provide the data in the current node, and finally we will 
+	traverse on the right side (thus getting the larger numbers last).
+
+	The use of the 'yield' will allow this function to support loops
+	like:
+
+	for value in my_bst:
+		print(value)
+
+    The keyword 'yield' will return the value for the 'for' loop to
+    use.  When the 'for' loop wants to get the next value, the code in
+    this function will start back up where the last 'yield' returned a 
+    value.  The keyword 'yield from' is used when our generator function
+    needs to call another function for which a `yield` will be called.  
+    In other words, the `yield` is delegated by the generator function
+    to another function.
+
+	This function is intended to be called the first time by 
+	the __iter__ function.
+	"""
+	if node is not None:
+		yield from self._traverse_forward(node.left)
+		yield node.data
+		yield from self._traverse_forward(node.right)
+
+```
 ### uses of tree
 ### example
 - navigate with a tree without recursion
@@ -60,4 +107,27 @@ def insert(self, data):
 ### problem
 - insert into a tree
 ### search tree syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
