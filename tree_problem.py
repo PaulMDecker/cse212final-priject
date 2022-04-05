@@ -1,6 +1,3 @@
-from dataclasses import dataclass
-
-
 class BST:
     """
     Implement the Binary Search Tree (BST) data structure.  The Node 
@@ -113,6 +110,8 @@ class BST:
             yield from self._traverse_forward(node.right)
         
 
+
+    
 tree = BST()
 tree.insert(5)
 tree.insert(3)
