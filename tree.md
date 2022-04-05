@@ -24,6 +24,33 @@ def insert(self, data):
       self.root = BST.Node(data)
     else:
       self._insert(data, self.root)
+      
+	"""
+	This function is the search function that will look for an empty node to place data in.
+  if the data is less than the data contained in the current node, it will try to place the 
+  data in the left child node, and if it is greater than the data in the current node, it will
+  place the data in the right child node. if the child node is already full, it will repeat the
+  process until it finds an empty node.
+	"""
+  def _insert(self, data, node):
+	if data < node.data:
+		# The data belongs on the left side.
+		if node.left is None:
+			# We found an empty spot
+			node.left = BST.Node(data)
+		else:
+			# Need to keep looking.  Call _insert
+			# recursively on the left subtree.
+			self._insert(data, node.left)
+	elif data >= node.data:
+		# The data belongs on the right side.
+		if node.right is None:
+			# We found an empty spot
+			node.right = BST.Node(data)
+		else:
+			# Need to keep looking.  Call _insert
+			# recursively on the right subtree.
+			self._insert(data, node.right)
 ```
 ### traversing a tree
 ### uses of tree
