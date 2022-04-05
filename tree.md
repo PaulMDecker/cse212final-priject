@@ -11,7 +11,9 @@
 ### binary search tree
 - A binary search tree is a tree that has certain rules for how data is stored inside it. The data is compared to the data inside the parent tree, and if it is smaller than the parent tree, it is put in the left child node, and if it is bigger it is put in the right child node. If the tree allows duplicates, it can go in either of the child nodes.
 <img width="448" alt="Screen Shot 2022-03-31 at 7 14 56 AM" src="https://user-images.githubusercontent.com/97462627/161063601-5440038a-f576-44e7-9a70-ef130b228b77.png">
+
 ### inserting into a tree
+
 - Binary search tree operations are very complicated because almost all of them require recursion to work. Inserting a number into a tree must be done with recursion because a loop can’t tell how many times it will need to run in this case because the branches of the tree can be a different length.
 ``` python
 def insert(self, data):
