@@ -77,12 +77,15 @@ def _traverse_forward(self, node):
 	"""
 	This function does an in-order traversal through the 
 	Binary search tree. 
-	If the node that we are given (which is the current
-	subtree) is not None, (meaning it exists), then we will keep 
-	traversing on the left side (thus getting the smaller numbers 
-	first), then we will provide the data in the current node, 
-	and finally we will traverse on the right side 
-	(thus getting the larger numbers last).
+	It starts by checking if the current node is real, (it has
+	something in it.
+	If there is something in it we will keep traversing to the left
+	side until we run out of nodes, This means we will get to the 
+	smaller numbers first.
+	we will then provide (yield) the data from the current node,
+	and then traverse the right nodes.
+	(getting to the larger numbers last.)
+	
 
 	The use of the 'yield' will allow this function to support loops
 	like:
@@ -108,19 +111,23 @@ def _traverse_forward(self, node):
 
 ```
 ### uses of tree
+- A binary search tree is used when you have a very large sorted list that needs to be searched through quickly. seaching through a BST has a big-O effiecncy of O(log n) because each time you iterate through the search function, it will halve the remaining data.
 ### example
 - navigate with a tree without recursion
 - use loop
 ### problem
 - insert into a tree
 ### search tree syntax
-
-
-
-
-
-
-
+common BST Operations  |  description  | code                 | Big O Performance
+-----------------------|---------------|----------------------|-------------------
+insert(value) | Insert a value into the tree. | O(log n) - Recursively search the subtrees to find the next available spot
+remove(value) | Remove a value from the tree. | O(log n) - Recursively search the subtrees to find the value and then remove it. This will require some cleanup of the adjacent nodes.
+contains(value) | Determine if a value is in the tree. | O(log n) - Recursively search the subtrees to find the value.
+traverse_forward | Visit all objects from smallest to largest. | O(n) - Recursively traverse the left subtree and then the right subtree. 
+traverse_reverse | Visit all objects from largest to smallest. | O(n) - Recursively traverse the right subtree and then the left subtree.
+height(node) | Determine the height of a node. If the height of the tree is needed, the root node is provided. | O(n) - Recursively find the height of the left and right subtrees and then return the maximum height (plus one to account for the root).
+size() | Return the size of the BST. | O(1) - The size is maintained within the BST class. 
+empty() | Returns true if the root node is empty. This can also be done by checking the size for 0. | O(1) - The comparison of the root node or the size.
 
 
 
