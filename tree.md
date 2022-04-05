@@ -118,8 +118,8 @@ def _traverse_forward(self, node):
 ### problem
 - insert into a tree
 ### search tree syntax
-common BST Operations  |  description  | code                 | Big O Performance
------------------------|---------------|----------------------|-------------------
+common BST Operations  |  description  | Big O Performance
+-----------------------|---------------|-------------------
 insert(value) | Insert a value into the tree. | O(log n) - Recursively search the subtrees to find the next available spot
 remove(value) | Remove a value from the tree. | O(log n) - Recursively search the subtrees to find the value and then remove it. This will require some cleanup of the adjacent nodes.
 contains(value) | Determine if a value is in the tree. | O(log n) - Recursively search the subtrees to find the value.
