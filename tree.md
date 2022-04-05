@@ -240,7 +240,7 @@ for node in tree:
 
 ```
 ### practice problem
-Adapt the insert function to work with a loop instead of using recursion.
+Implement a function that searches through a tree for a certain number using a loop instead of recursion.
 Here is the [problem](https://github.com/PaulMDecker/cse212final-project/blob/main/tree_problem.py).
 here is the [solution](https://github.com/PaulMDecker/cse212final-project/blob/main/tree_solution.py).
 ### search tree syntax
