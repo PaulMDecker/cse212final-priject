@@ -1,25 +1,7 @@
-### 1. Welcome
- - Introduction
- - Contact
-### 2. stack
-  - Introduction
-  - how to use stacks
-  - undo action and stacks
-  - function stack
-  - uses of stacks 
-  - stack syntax
-  
-### 3. set
-- Introduction
-- hashing sets
-- addressing conflicts from hashing
-- uses of sets
-- set syntax
-### 4. tree
-- Introduction
-- binary tree
-- binary search tree
-- inserting into a tree
-- traversing a tree
-- uses of trees
-- search tree syntax
+#  Python stack, set, and tree tutorial
+welcome to my python tutorial. This tutorial will focus on three moderate topics:
+ - [stack](cse212final-project/stack.md)
+ - [set](cse212final-project/set.md)
+ - [tree](cse212final-project/tree.md)
+
+Each moduel contains a description, an example, a problem, and basic syntax for the data structure its about. you should only look at the answer to the problem after you tried to solve it.
