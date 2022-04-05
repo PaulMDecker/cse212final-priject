@@ -9,10 +9,10 @@
 <img width="662" alt="Screen Shot 2022-03-30 at 1 59 30 PM" src="https://user-images.githubusercontent.com/97462627/160920621-959f7e8a-ff1f-4cea-bbf4-2a7fd6f72f6a.png">
 
 ### binary search tree
--A binary search tree is a tree that has certain rules for how data is stored inside it. The data is compared to the data inside the parent tree, and if it is smaller than the parent tree, it is put in the left child node, and if it is bigger it is put in the right child node. If the tree allows duplicates, it can go in either of the child nodes.
+- A binary search tree is a tree that has certain rules for how data is stored inside it. The data is compared to the data inside the parent tree, and if it is smaller than the parent tree, it is put in the left child node, and if it is bigger it is put in the right child node. If the tree allows duplicates, it can go in either of the child nodes.
 <img width="448" alt="Screen Shot 2022-03-31 at 7 14 56 AM" src="https://user-images.githubusercontent.com/97462627/161063601-5440038a-f576-44e7-9a70-ef130b228b77.png">
 ### inserting into a tree
--Binary search tree operations are very complicated because almost all of them require recursion to work. Inserting a number into a tree must be done with recursion because a loop can’t tell how many times it will need to run in this case because the branches of the tree can be a different length.
+- Binary search tree operations are very complicated because almost all of them require recursion to work. Inserting a number into a tree must be done with recursion because a loop can’t tell how many times it will need to run in this case because the branches of the tree can be a different length.
 ``` python
 def insert(self, data):
   """
@@ -53,9 +53,9 @@ def insert(self, data):
 			self._insert(data, node.right)
 ```
 ### traversing a tree
--When you want to display all the data in a tree, you need to traverse the tree. There are three methods of traversing a tree. The pre-order traversal, the in-order traversal, and the post-order traversal. Pre-order traversal is when we iterate through the nodes from left to right, in-order traversal is when we iterate through the tree from smallest to largest, and post-order traversal is when we iterate from the leaves of the tree to the root.
--For this lesson, we will focus on in-order traversal. 
-```
+- When you want to display all the data in a tree, you need to traverse the tree. There are three methods of traversing a tree. The pre-order traversal, the in-order traversal, and the post-order traversal. Pre-order traversal is when we iterate through the nodes from left to right, in-order traversal is when we iterate through the tree from smallest to largest, and post-order traversal is when we iterate from the leaves of the tree to the root.
+- For this lesson, we will focus on in-order traversal. 
+``` python
 def __iter__(self):
 	"""
     Perform a forward traversal (in order traversal) starting from 
